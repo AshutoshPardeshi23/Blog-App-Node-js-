@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+html, body{
+    font-size: 62.5%;
+    background: linear-gradient(57deg, #4d4040 50%, #646464 30rem);
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.hed{
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
+    background-color: #b4b4b4;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-align: right;
+}
+.hed a{
+    position: relative;
+    margin: 2rem;
+    top: 30%;
+    text-decoration: none;
+}
+.main_div{
+    width: 100%;
+    height: 100%;
+    margin-top: 6rem;
+    display:list-item;
+    columns: 5;
+}
+.cards{
+    position: relative;
+    height: 21rem;
+    width: 21rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    background-color: #9c9c9c75;
+    border-radius: 1rem;
+}
+.cards i{
+    position: absolute;
+    width: 3rem;
+    height: 25rem;
+    top: -1rem;
+    left: -.2rem;
+    background-color: #ffffff;
+    rotate: 10deg;
+    filter: blur(1.8rem);
+    animation: eft 1s infinite;
+}
+@keyframes eft {
+    0%{ left: -.2rem }
+    100%{ left: 110% }
+}
+.card{
+    position: relative;
+    height: 21rem;
+    width: 21rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    background-color: #a09a9a69;
+    border: 2px solid #929292;
+}
+#userdata{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 2rem;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+    align-items: center;
+    background-color: #ccc8c8;
+}
+#userdata img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: scale-down;
+    margin-left: 2rem;
+}
+.baner{
+    width: 100%;
+    height: 100%;
+}
+.baner img{
+    width: 100%;
+    height: 15rem;
+    object-fit: scale-down;
+}
+.baner h4{
+    width: 100%;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.card:hover{
+    border: 2px solid #4df12c;
+}
+
+@media screen and (max-width: 1070px) {
+    html{
+        font-size: 59%;
+    }
+    .main_div{
+        columns: 3;
+    }
+    .card{
+        margin-top: .5rem;
+    }
+}
+@media screen and (max-width: 650px) {
+    .main_div{
+        columns: 2;
+    }
+}

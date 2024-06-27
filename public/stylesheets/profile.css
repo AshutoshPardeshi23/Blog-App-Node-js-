@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+html, body{
+    font-size: 62.5%;
+    background-color: #41495e;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.main_div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.div_l{
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+    height: 100vh;
+    text-align: start;
+    background-color: #9ea89356;
+}
+.div_l li{
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 1.6rem;
+    height: 2rem;
+    border-bottom: .1rem solid black;
+}
+.div_r{
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.div_r img{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.cards{
+    position: relative;
+    height: 21rem;
+    width: 21rem;
+    overflow: hidden;
+    background-color: #ffffff5e;
+    border-radius: 1rem;
+}
+.cards i{
+    position: absolute;
+    width: 3rem;
+    height: 25rem;
+    top: -1rem;
+    left: -.2rem;
+    background-color: #d8d6d6;
+    rotate: 10deg;
+    filter: blur(1.8rem);
+    animation: eft 1s infinite;
+}
+@keyframes eft {
+    0%{ left: -.2rem }
+    100%{ left: 110% }
+}
+.card_div{
+    width: 80%;
+    height: 100%;
+    margin-top: 6rem;
+    margin-left: 21%;
+    display:list-item;
+    columns: 4;
+}
+.card{
+    position: relative;
+    height: 21rem;
+    width: 21rem;
+    overflow: hidden;
+    border: 2px solid #979797;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    background-color: #a09a9a69;
+}
+#userdata{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: .5rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: #ccc8c8;
+}
+#userdata img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+#userdata #delete{
+    position: relative;
+    color: #222525;
+    left: 38%;
+}
+.baner{
+    width: 100%;
+    height: 100%;
+}
+.baner img{
+    width: 100%;
+    height: 15rem;
+    object-fit:scale-down;
+}
+.baner h4{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.card:hover{
+    border: 2px solid #4df12c;
+}
+
+@media screen and (max-width: 1060px) {
+    html{
+        font-size: 59%;
+    }
+    .card_div{
+        columns: 3;
+    }
+}
+@media screen and (max-width: 830px) {
+    .card_div{
+        columns: 2;
+    }
+    .card{
+        width: 15rem;
+        height: 15rem;
+    }
+} 

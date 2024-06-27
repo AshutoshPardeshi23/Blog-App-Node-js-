@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+html, body{
+    font-size: 62.5%;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.main_div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+}
+.div_l{
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+    height: 100vh;
+    text-align: start;
+    background-color: #a8a8a865;
+}
+.div_l li{
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 1.6rem;
+    height: 2rem;
+    border-bottom: .1rem solid black;
+}
+.div_r{
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.div_r img{
+    position: relative;
+    width: 40rem;
+    height: 30rem;
+    margin: 2rem;
+    object-fit: scale-down;
+}
+.comment{
+    position: relative;
+    margin-left: 20%;
+    margin-top: 20rem;
+    width: 80%;
+}
+.post_user{
+    position: relative;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    font-size: 1.6rem;
+    border-top: .2rem solid black;
+}
+.post_user img{
+    height: 6rem;
+    margin: 2rem;
+    width: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment_list{
+    position: relative;
+    width: 100%;
+}
+.post_comment{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 1rem;
+    border-top: .1rem solid black;
+}
+.post_comment img {
+    display: flex;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment_list p{
+    width: 100%;
+    margin-left: 1rem;
+    min-height: 4rem;
+    font-size: 1.3rem;
+    text-align: start;
+}
+#add_comment{
+    width: 30rem;
+    height: 3rem;
+    margin: 2rem;
+}
+#post_comment{
+    width: 9rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #5c94e7;
+}
+@media screen and (max-width: 1060px) {
+    html{
+        font-size: 35%;
+    }
+    .card_div{
+        columns: 3;
+    }
+}
