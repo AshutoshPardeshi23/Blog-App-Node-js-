@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="/stylesheets/upload.css">
+</head>
+<body>
+
+    <div class="main_div">
+        <div class="div_l">
+            <li><a href="/feed">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/upload/post">Upload</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </div>
+    </div>
+
+    <div class="div_r">
+
+
+        <button id="null">
+            <form action="/upload/null" method="post" enctype="multipart/form-data">    
+                <button id="null_img" type="submit"> No img </button> 
+            </form>
+        </button>
+
+        
+
+        <form action="/upload/dp" method="post" enctype="multipart/form-data">
+
+            <div class="choose_img">
+                <input class="upload_img" type="file" name="file">
+                <box onclick="document.querySelector('.upload_img').click()">upload Dp</box>
+            </div>
+    
+            <input class="submit" type="submit">    
+                
+    </form>
+    </div>
+</body>
+</html>

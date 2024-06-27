@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/stylesheets/Profile.css">
+</head>
+<body>
+
+
+    <div class="main_div">
+        <div class="div_l">
+            <li><a href="/feed">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/upload/post">Upload</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </div>
+        <div class="div_r">
+            <a href="/upload/dp">
+                    <img src="/images/<%= user.dp_img %>" alt="">
+            </a>
+
+            <h1><%= user.username %></h1>
+            <h4>Upload post <%= user.post.length %></h4>
+        </div> 
+    </div>
+
+    
+    <div class="card_div">
+        <% if(user.post.length === 0) { %>
+            <div>
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+            </div>
+            <% }else{%>
+                <% user.post.reverse().forEach((elem) => { %>
+                    <div class="card">
+                        <div id="userdata">
+                            <img src="/images/<%= user.dp_img %>" alt="">
+                            <a href="">
+                                <p><%= user.username %></p>
+                            </a>
+                            <a id="delete" href="/delete/<%= elem._id %>">Delete</a>
+                        </div>
+
+                        <div class="baner">
+
+                            <a href="/data/<%= elem._id %>">
+
+                                <img src="/images/<%= elem.post_img %>" alt="">
+
+                            </a>
+
+                            <h4><%= elem.post_title %> </h4>
+                        </div>
+
+                    </div>  
+                  <% }) %>  
+                       <% } %>
+         
+    </div>
+
+</body>
+</html>

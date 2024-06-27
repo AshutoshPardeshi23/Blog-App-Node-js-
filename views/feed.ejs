@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feed</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+<body>
+
+    <div class="hed">
+        <a href="/feed">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/upload/post">Upload</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+
+    <div class="main_div">
+        <% if(post.length === 0) { %>
+            <div>
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div>
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+                <div class="cards">
+                    <i></i>
+                </div> 
+            </div>
+            <% }else{ %>
+                <% post.reverse().forEach((elem) => { %>
+                <div class="card">
+                    <div id="userdata">
+                        <img src="/images/<%= elem.user.dp_img %>" alt="">
+                        <a href="">
+                            <p><%= elem.user.username %></p>
+                        </a>
+                   </div>
+                   <div class="baner">
+                    <a href="/data/<%= elem._id %>">
+                        <img src="/images/<%= elem.post_img %>" alt="">
+                    </a>
+
+                    <h4><%= elem.post_title %></h4>
+                    </div>
+                </div>
+                <% }) %>
+            <% } %>
+    </div>
+    
+</body>
+</html>

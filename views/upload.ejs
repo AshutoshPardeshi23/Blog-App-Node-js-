@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="/stylesheets/upload.css">
+</head>
+<body>
+
+    <div class="main_div">
+        <div class="div_l">
+            <li><a href="/feed">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/upload/post">Upload</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </div>
+    </div>
+
+    <div class="div_r">
+        <form action="/upload/post" method="post" enctype="multipart/form-data">
+
+            <div class="choose_img">
+                <input class="upload_img" type="file" name="file">
+                <box onclick="document.querySelector('.upload_img').click()">upload post</box>
+            </div>
+
+            <div>
+                <input class="title" type="text" placeholder="Enter Title" name="title">
+                <input class="submit" type="submit">
+            </div>
+
+            <div>
+                <textarea class="data" type="text" placeholder="Enter post Data" name="data"></textarea>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

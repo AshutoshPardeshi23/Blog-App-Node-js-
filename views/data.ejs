@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+    <link rel="stylesheet" href="/stylesheets/data.css">
+</head>
+<body>
+    <div class="main_div">
+        <div class="div_l">
+            <li><a href="/feed">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/Upload/post">Upload</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </div>
+        <div class="div_r">
+            <h1><%= post.post_title %></h1>
+            <img src="/images/<%= post.post_img %>" alt="">
+            <p><%= post.post_data %></p>
+        </div>
+
+        <div class="comment">
+            
+            <div class="post_user">
+                <img src="/images/<%= post.user.dp_img %>" alt="">
+                <h4><%= post.user.username %></h4>
+            </div>
+
+            <div>
+                <form action="/comment/<%= post._id %>" method="post">
+                    <input id="add_comment" type="text" placeholder="Add comment" name="comment">
+                    <input id="post_comment" type="submit">
+                </form>
+            </div>
+
+            <div class="comment_list">
+                <% post.comment.reverse().forEach(function(elem){ %>
+
+                <div class="post_comment">
+                    <img src="/images/<%= post.user.dp_img %>" alt="">
+                    <h5><%= post.user.username %></h5>
+                </div>
+                <p><%= elem %></p>
+
+                <% }) %>
+            </div>           
+        </div>
+       
+    </div>
+    <script src="/javascripts/stop_loding_scroll.js"></script>
+</body>
+</html>
